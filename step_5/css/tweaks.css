@@ -1,0 +1,27 @@
+@media all and (max-width: 500px) {
+	body{
+		font-family: "Droid Serif", Georgia, sans;
+	}
+
+
+	h1,h2,h3{
+		font-family: "Droid Sans", Helvetica, sans;
+
+	}
+	#description p{
+		font-family: "Droid Sans", Helvetica, sans;
+	}
+	#copyright{
+		font-family: "Droid Sans", Helvetica, sans;
+	}
+	h1{
+		font-size: 3rem;
+	}
+	h2{
+		font-size: 2.5rem;
+	}
+	h3{
+		font-size: 2rem;
+	}
+
+}

@@ -1,7 +1,10 @@
 /****************************************************/
 /* Fonts  */
 /****************************************************/
-html { font-size: 62.5%; } 
+html { 
+	font-size: 62.5%; 
+	font-family: noticia-text, serif;
+} 
 h1,h2,h3{
 	font-family: ceviche-one, sans;
 
@@ -17,7 +20,6 @@ h3{
 }
 
 p{
-	font-family: noticia-text, serif;
 	font-size: 1.5rem;
 }
 
