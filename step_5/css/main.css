@@ -29,10 +29,11 @@ header p{
 #description p {
 	font-family: ceviche-one, sans;
 	font-size: 3.5rem;
+	text-align: center;
 }
 footer p{
 	font-family: ceviche-one, sans;
-	font-size: 2.5rem;
+	font-size: 3rem;
 }
 
 nav ul li{
@@ -66,14 +67,14 @@ header p{
 	color: #f96755;
 }
 #hallofshame h2{
-	color: #663070;
+	color: #fcc4bc;
 }
 
 #halloffame h3{
-	color: #b874c3;
+	color: #fcc4bc;
 }
 #hallofshame h3{
-	color: #fcc4bc;
+	color: #f96755;
 }
 
 #description p {
@@ -95,9 +96,14 @@ img{
 /* Backgrounds */
 /****************************************************/
 html{
+	background-color: #777;
+	
+}
+
+nav{
 	background-image: url('bg.jpg');
 	background-attachment: scroll;
-	background-size: contain;
+	background-size: cover;
 	background-position: 0% 0%;
 	background-repeat: repeat repeat;
 }
@@ -118,8 +124,11 @@ body{
 /* margins and padding */
 /****************************************************/
 body{
-	padding: 0 10px;
+	padding: 0;
 
+}
+header, #content, footer{
+	padding: 0 10px;
 }
 
 h1{
@@ -163,10 +172,6 @@ header p{
 /****************************************************/
 /*Borders and Shadows */ 
 /****************************************************/
-body{
-	border-left: 2px solid #43460b;
-	border-right: 2px solid #43460b;
-}
 
 h1{
 	text-shadow: rgb(124, 124, 124) 2px 2px 3px;
@@ -232,10 +237,17 @@ body{
 /*Nav  */
 /****************************************************/
 
+
+nav{
+	height: 220px;
+	width: 100%;
+}
+
 nav ul{
 	list-style: none;
 	padding-left: 0;
 	clear: both;
+	padding-top: 40px;
 }
 
 nav ul:after {
@@ -244,12 +256,13 @@ nav ul:after {
   clear: both;
 }
 nav ul li a{
-	width: 120px;
+	width: 25%;
 	float: left;
-	margin-right: 10px;
-	padding: 5px 10px;
-	background-image: -webkit-linear-gradient(275deg, rgba(200, 200, 200, 0.4) 0%, rgba(200, 200, 200, 0.4) 100%);
+	margin-right: 0;
+	padding: 15px 0;
+	background: -webkit-linear-gradient(270deg,rgba(255,255,255,0.952941) 0%,rgba(255,255,255,0.811765) 100%);
 	color: #663070;
+	text-align: center;
 }
 
 nav ul li a:hover{

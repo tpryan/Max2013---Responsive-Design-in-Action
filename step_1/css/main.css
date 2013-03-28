@@ -29,6 +29,7 @@ header p{
 #description p {
 	font-family: ceviche-one, sans;
 	font-size: 3.5rem;
+	text-align: center;
 }
 footer p{
 	font-family: ceviche-one, sans;
