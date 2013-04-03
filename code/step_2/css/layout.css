@@ -30,7 +30,7 @@ nav ul li a{
 
 nav ul:after{
   content: "";
-  display: block;
+  display: table;
   clear: both;
 }
 
@@ -41,6 +41,6 @@ body { min-height: 100%; }
 
 #content:after{
   content: "";
-  display: block;
+  display: table;
   clear: both;
 }
