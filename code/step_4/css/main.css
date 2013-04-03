@@ -109,7 +109,7 @@ nav{
 }
 
 body{
-	background-image: -webkit-linear-gradient(275deg, rgba(255, 255, 255, 0.890196) 0%, rgba(255, 255, 255, 0.890196) 100%);
+	background-color: #eee;
 }
 
 #halloffame .person{
@@ -239,39 +239,27 @@ body{
 
 
 nav{
-	height: 220px;
 	width: 100%;
+	padding-bottom: 20px;
 }
 
 nav ul{
 	list-style: none;
 	padding-left: 0;
-	clear: both;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
-nav ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 nav ul li a{
-	width: 25%;
-	float: left;
-	margin-right: 0;
-	padding: 15px 0;
+	display: block;
 	background: -webkit-linear-gradient(270deg,rgba(255,255,255,0.952941) 0%,rgba(255,255,255,0.811765) 100%);
 	color: #663070;
 	text-align: center;
+	text-decoration: none;
+	padding: 15px 0;
 }
 
 nav ul li a:hover{
-	background-image: -webkit-linear-gradient(275deg, rgba(200, 200, 200, 1) 0%, rgba(200, 200, 200, 1) 100%);
+	background-image: -webkit-linear-gradient(275deg, rgba(200, 200, 200, .9) 0%, rgba(200, 200, 200, .9) 100%);
 	color: #b874c3;
 }
-
-nav ul li a{
-	text-decoration: none;
-}
-
 

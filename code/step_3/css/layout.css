@@ -25,13 +25,18 @@
 }
 
 
-#content {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 body{ 
 	height: 100%;
 }
 
+
+nav ul li a{
+	width: 25%;
+	float: left;
+}
+
+nav ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
