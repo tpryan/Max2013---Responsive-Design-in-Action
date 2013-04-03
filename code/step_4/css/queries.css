@@ -1,32 +1,33 @@
-
-@media all and (max-width: 730px) {
-
-	#hallofshame, #halloffame{
-		width: 50%;
-	}
+@media all and (max-width: 850px) {
 	#description{
 		width: 100%;
 	}
-
+    #hallofshame, #halloffame{
+		width: 50%;
+	}
 }
 
 @media all and (max-width: 550px) {
-
-	nav ul {
-		padding-top: 0;
-	}
-
-	header{
+    #hallofshame, #halloffame{
 		width: 100%;
 	}
-	nav{
+    nav ul li a{
 		width: 100%;
 	}
-	nav ul li a{
-		width: 100%;
-	}
-	#hallofshame, #halloffame{
-		width: 100%;
-	}
+    
+    nav ul {
+        padding: 0;
+    }
+    
+    h1{
+        font-size: 4em;
+    }
+    
+    #description p{
+        font-size: 3em;
+    }
+    h2{
+        font-size: 3.5em;
+    }    
 
 }
