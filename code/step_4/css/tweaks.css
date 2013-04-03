@@ -1,30 +1,33 @@
-@media all and (max-width: 500px) {
-	body{
-		font-family: "Droid Serif", Georgia, sans;
-	}
+@media all and (max-width: 550px) {
+    
+    body{
+	   background-color: #CCCCCC;
+    }
+    
+    #halloffame .person{
+        background-color: #eeeeee;
+    }
+    
+    #hallofshame .person{
+        background-color: #FFFFFF;
+    }
+    
+    
+}
 
-
-	h1,h2,h3{
-		font-family: "Droid Sans", Helvetica, sans;
-
-	}
-	#description p{
-		font-family: "Droid Sans", Helvetica, sans;
-	}
-	#copyright{
-		font-family: "Droid Sans", Helvetica, sans;
-	}
-	nav ul li{
-		font-family: "Droid Sans", Helvetica, sans;
-	}
-	h1{
-		font-size: 3rem;
-	}
-	h2{
-		font-size: 2.5rem;
-	}
-	h3{
-		font-size: 2rem;
-	}
-
+@media all and (max-width: 330px) {
+    
+    h1{
+        font-size: 3em;
+        font-family:MarkerFelt-Thin, sans-serif;
+    }
+    #description p {
+        font-size: 2.5em;
+        font-family:MarkerFelt-Thin, sans-serif;
+    }
+    nav ul li {
+        font-size: 1.9em;
+        font-family:MarkerFelt-Thin, sans-serif;
+    }
+    
 }
