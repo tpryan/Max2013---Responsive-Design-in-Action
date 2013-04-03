@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Design in Acttion</title>
+
+		<meta name="description" content="The short presentation I'll be giving with the Responsive Design Lab">
+		<meta name="author" content="Terry Ryan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">	
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<img src="css/theme/max2013/adobelogo_redtag.svg" class="adobelogo" id="adobelogo" />
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<section class="titleslide">
+						<hgroup>
+							<h1>Responsive Design in Action</h1>
+							<h2>Terry Ryan | Creative Cloud Evangelist</h2>
+						</hgroup>
+						<img src="css/theme/max2013/logo.png" class="transparent" id="logo" />
+						<img src="css/theme/max2013/bird.png" class="transparent" id="bird" />
+					</section>
+					<section class="question">
+						<div class="content">
+							<h1>Who are you?</h1>
+						</div>	
+					</section>
+					<section>
+						<h1>Agenda</h1>
+						<div class="content-with-bg">
+							<ul>
+								<li>Introduction</li>
+								<li>Design
+									<ul>
+										<li>Comp</li>
+										<li>Adobe Edge Reflow</li>
+									</ul>
+								</li>
+								<li>Code</li>
+
+
+							</ul>
+						</div>					
+					</section>
+					<section>
+						<h1>Not a Reflow Lab</h1>
+						<div class="content">
+							<img src="img/reflow.svg" class="transparent mneumonic-large" />
+						</div>					
+					</section>
+
+				</section>
+				<section>
+					<h1>Standard White Background Bullet Slide</h1>
+					<div class="content-with-bg">
+						<ul>
+							<li>Level 1 Bullet
+								<ul>
+									<li>Level 2 Bullet
+										<ul>
+											<li>Level 3 Bullet</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<p><strong>Strong Text</strong></p>
+						<p><em>Emphasized text</em></p>	
+					</div>					
+				</section>
+
+				<section>
+					<h1>Standard Blank Slide with Image</h1>
+					<div class="content">
+						<img src="img/blackkeys.png" />
+						<p><em>"You are killing my hispter cred with your plain green shirt"</em></p>	
+					</div>					
+				</section>
+
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1>Vertical Slides</h1>
+						<div class="content">
+							<p>
+								Slides can be nested inside of other slides,
+								try pressing <a href="#" class="navigate-down">down</a>.
+							</p>
+							<a href="#" class="image navigate-down">
+								<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+							</a>
+						</div>
+					</section>
+					<section>
+						<h1>Basement Level 1</h1>
+						<div class="content">
+							<p>Press down or up to navigate.</p>
+						</div>	
+					</section>
+					<section>
+						<h1>Basement Level 2</h1>
+						<div class="content">
+							<p>Cornify</p>
+							<a class="test" href="http://cornify.com">
+								<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
+							</a>
+						</div>
+					</section>
+					<section>
+						<h1>Basement Level 3</h1>
+						<p>That's it, time to go back up.</p>
+						<a href="#/2" class="image">
+							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h1>Marvelous Unordered List</h1>
+					<div class="content">
+						<ul>
+							<li>No order here</li>
+							<li>Or here</li>
+							<li>Or here</li>
+							<li>Or here</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h1>Fantastic Ordered List</h1>
+					<div class="content">
+						<ol>
+							<li>One is smaller than...</li>
+							<li>Two is smaller than...</li>
+							<li>Three!</li>
+						</ol>
+					</div>	
+				</section>
+
+
+
+
+
+
+				<section>
+					<h1>Clever Quotes</h1>
+					<div class="content">
+						<p>
+							These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							The nice thing about standards is that there are so many to choose from</q> and block:
+						</p>
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+							reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+						</blockquote>
+					</div>
+				</section>
+
+				<section>
+					<h1>Pretty Code</h1>
+					<div class="content">
+						<pre><code contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+						</code></pre>
+						<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					</div>
+				</section>
+
+
+
+
+
+
+				<section>
+					<h1>Stellar Links</h1>
+					<div class="content-with-bg">
+						<ul>
+							<li><a href="http://max.adobe.com">Max Site</a></li>
+							<li><a href="http://html.adobe.com">HTML &amp; Adobe</a></li>
+						</ul>
+					</div>
+				</section>
+
+
+				<section>
+					<h1>THE END</h1>
+					<div class="content">
+					</div>	
+				</section>
+
+			</div>
+
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				margin: 0,
+
+				theme: 'max2013', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
