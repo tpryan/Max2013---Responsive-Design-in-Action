@@ -67,27 +67,26 @@
 <aside>
   <p><em>What is the deal with box-sizing: border-box?</em><p>
 
-<p>Basically we're changing the way the width of an item is calculated by the browser.  Normally the width excludes padding. So if I make a box, set width: 300px then set padding: 20px in real terms my box will be 340px wide. </p>
+  <p>Basically we're changing the way the width of an item is calculated by the browser.  Normally the width excludes padding. So if I make a box, set width: 300px then set padding: 20px in real terms my box will be 340px wide. </p>
 
-<code><pre>20px of left padding + 300px of width + 20px of right padding = 340px. 
-</pre></code>
-<p>Setting border box changes this. It forces the browser to include the padding inside the 300px width.  So it changes the equation to this:</p>
+  <code><pre>20px of left padding + 300px of width + 20px of right padding = 340px. 
+  </pre></code>
+  <p>Setting border box changes this. It forces the browser to include the padding inside the 300px width.  So it changes the equation to this:</p>
 
-<code><pre>300px =  20px of left padding + Xpx of width + 20px of right padding
-Solve for X = 260.
-</pre></code>
-<p>What does this have to do with responsive designs?  We normally want to set widths to a percentage so as we resize the browser column sizes resize.  However that leads untenable paddings.  Like setting all padding to 1% and then taking that 1% out of our column widths so they never add up to above 100%. It starts to get difficult to track, and quite frankly you can make the argument that padding like that should be in pixels and not percents.</p>
+  <code><pre>300px =  20px of left padding + Xpx of width + 20px of right padding
+  Solve for X = 260.
+  </pre></code>
+  <p>What does this have to do with responsive designs?  We normally want to set widths to a percentage so as we resize the browser column sizes resize.  However that leads untenable paddings.  Like setting all padding to 1% and then taking that 1% out of our column widths so they never add up to above 100%. It starts to get difficult to track, and quite frankly you can make the argument that padding like that should be in pixels and not percents.</p>
 
-<p>Well now you can do that, with Border Box. </p>
+  <p>Well now you can do that, with Border Box. </p>
 
-<p>More on Border Box</p>
+  <p>More on Border Box</p>
 
 
-<ul>
-  <li><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">http://paulirish.com/2012/box-sizing-border-box-ftw/</a></li>
-
-   <li><a href="http://css-tricks.com/box-sizing/">http://css-tricks.com/box-sizing/</a></li>
-</ul>
+  <ul>
+    <li><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">http://paulirish.com/2012/box-sizing-border-box-ftw/</a></li>
+    <li><a href="http://css-tricks.com/box-sizing/">http://css-tricks.com/box-sizing/</a></li>
+  </ul>
 </aside> 
 
 <p>That's all great but it doesn't change the appearance of the page. </p>
@@ -179,7 +178,32 @@ Solve for X = 260.
 <p>Looks okay, but because we're floating those navigation links they no longer expand the box they are sitting in. To fix that we'll use a clearfix</p>
 
 
-[Explain Clearfix here] 
+<aside>
+  
+  <p>When you float an element it no longer has any impact on the height of it's parent. If you float all of the children of element it's height becomes 0.  To fix this you need to basically add a fake element past the floated children and clear it completely. This will force the height of the containing element to take up all of the height of the children.  A clearfix does this:</p>
+
+<code><pre class="prettyprint lang-css">
+*:after{
+      content: "";
+     display: block;
+     clear: both;
+}
+</pre></code>
+
+  <dl>
+    <dt>after</dt><dd>adds it via css, so no HTML hackery needed.</dd>
+    <dt>content</dt><dd>adds a blank piece of content</dd>
+    <dt>display</dt><dd>table reduces impact on margins</dd>
+    <dt>clear</dt><dd>clears out the float</dd>
+  </dl>
+
+  <p>More on Clearfix</p>
+
+  <ul>
+    <li><a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a></li>
+    <li><a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></li>
+  </ul>
+</aside> 
 
 <code>
 <pre class="prettyprint lang-css">nav ul:after{
