@@ -33,3 +33,7 @@ dt{
 dd{
 	font-style: italic;
 }
+
+code{
+  font-family: source-code-pro, serif;
+}
