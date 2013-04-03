@@ -37,3 +37,10 @@ nav ul:after{
 
 html { height: 100%; }
 body { min-height: 100%; }
+
+
+#content:after{
+  content: "";
+  display: block;
+  clear: both;
+}
