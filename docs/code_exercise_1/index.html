@@ -40,7 +40,7 @@
 </ul>
 
 <code>
-<pre class="prettyprint lang-html linenums">&lt;link rel="stylesheet" href="css/layout.css"/&gt; 
+<pre class="prettyprint lang-html">&lt;link rel="stylesheet" href="css/layout.css"/&gt; 
 </pre></code>
 
 <figure>
@@ -57,7 +57,7 @@
 
 
 <code>
-<pre class="prettyprint lang-css linenums">*, *:after, *:before {
+<pre class="prettyprint lang-css">*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -71,7 +71,7 @@
 <p>Next we're going to make the 3 sections in content each take up a third of the screen. </p>
 
 <code>
-<pre class="prettyprint lang-css linenums">#description{
+<pre class="prettyprint lang-css">#description{
      width: 33%;   
 }
 
@@ -92,7 +92,7 @@
 <p>Now we're going to make them slide next to each other using float:left;</p>
 
 <code>
-<pre class="prettyprint lang-css linenums">#description{
+<pre class="prettyprint lang-css">#description{
      width: 33%;
      float:left;    
 }
@@ -115,7 +115,7 @@
 <p>Looking good, but we need a little more space between the "halls." We'll do it with padding.  Because we are using the border-box model we can add padding without fiddling with column widths.</p>
 
 <code>
-<pre class="prettyprint lang-css linenums">#description{
+<pre class="prettyprint lang-css">#description{
     width: 33%;
     float:left;   
 }
@@ -141,7 +141,7 @@
 <p>Much better. Now we'll take on the navigation. Same idea as with the content columns, but instead of thirds, we'll be using quarters</p>
 
 <code>
-<pre class="prettyprint lang-css linenums">nav ul li a{
+<pre class="prettyprint lang-css">nav ul li a{
      width: 25%;
      float: left;
 }
@@ -158,7 +158,7 @@
 [Explain Clearfix here] 
 
 <code>
-<pre class="prettyprint lang-css linenums">nav ul:after{
+<pre class="prettyprint lang-css">nav ul:after{
   content: "";
   display: block;
   clear: both;
@@ -174,7 +174,7 @@
 <p>There, almost perfect.  The last thing we need to do (and this isn't necessarily a responsive thing,) is make the light colored body extend all the way to the end of the page. </p>
 
 <code>
-<pre class="prettyprint lang-css linenums">html { height: 100%; }
+<pre class="prettyprint lang-css">html { height: 100%; }
 body { min-height: 100%; }
 </pre></code>
 
@@ -193,7 +193,7 @@ body { min-height: 100%; }
 </figure>
 
 <code>
-<pre class="prettyprint lang-css linenums">#content:after{
+<pre class="prettyprint lang-css">#content:after{
   content: "";
   display: block;
   clear: both;
@@ -211,7 +211,7 @@ body { min-height: 100%; }
 <p>All the CSS for this Exercise:</p>
 
 <code>
-<pre class="prettyprint lang-css linenums">*, *:after, *:before {
+<pre class="prettyprint lang-css">*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
