@@ -1,0 +1,264 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+   <title>Responsive Design in Action Lab - Code Exercise 1</title>
+   <link rel="stylesheet" href="../_style/main.css" type="text/css" media="screen" />
+   <link href="../_style/prettify.css" type="text/css" rel="stylesheet" />
+   <link href="../_style/tomorrow.css" type="text/css" rel="stylesheet" />
+   <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+   <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+   <script type="text/javascript" src="../_style/prettify.js"></script> 
+   <script type="text/javascript" src="../_style/main.js"></script> 
+</head> 
+<body>
+
+
+<h1>Code Exercise 1 - Flexible Grid</h1>
+
+<p>Over the course of this exercise we will be taking the code in the working directly from how it appears in step_0 to how it appears in step_1</p>
+
+
+<ul>
+   <li>Start with code in <em>/lab/code/working</em></li>
+   <li>Open <em>index.html</em> in Adobe Edge Code (or code editor of your choice)</li>
+   <li>Open <em>index.html</em> in Chrome.</li>
+</ul>
+
+<p>All of the color, background, and font choices have been brought over from Reflow. None of the layout has been done. We're going to code that by hand. 
+
+<figure>
+   <img src="img/01.png" />
+   <figcaption>Figure 1</figcaption>
+</figure>
+
+
+<h2>Add a layout.css file to the project</h2>
+
+<ul>
+   <li>In the folder lab/code/working/css add a file named layout.css</li>
+   <li>In index.html add the following line of code to the HTML header:</li>
+</ul>
+
+<code>
+<pre class="prettyprint lang-html linenums">&lt;link rel="stylesheet" href="css/layout.css"/&gt; 
+</pre></code>
+
+<figure>
+   <img src="img/02.png" />
+   <figcaption>Figure 2</figcaption>
+</figure>
+
+<p>Now we're going to add some CSS rules to make things layout as a grid. </p>
+
+
+<h2>Layout content as a grid</h2>
+
+<p>Add any rules below to layout.css.</p>
+
+
+<code>
+<pre class="prettyprint lang-css linenums">*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+</pre></code>
+
+[Explain border-box]
+
+<p>That's all great but it doesn't change the appearance of the page. </p>
+
+<p>Next we're going to make the 3 sections in content each take up a third of the screen. </p>
+
+<code>
+<pre class="prettyprint lang-css linenums">#description{
+     width: 33%;   
+}
+
+#halloffame{
+     width: 33%;
+}
+
+#hallofshame{
+     width: 33%;
+} 
+</pre></code>
+
+<figure>
+   <img src="img/03.png" />
+   <figcaption>Figure 3</figcaption>
+</figure>
+
+<p>Now we're going to make them slide next to each other using float:left;</p>
+
+<code>
+<pre class="prettyprint lang-css linenums">#description{
+     width: 33%;
+     float:left;    
+}
+
+#halloffame{
+     width: 33%;
+     float:left;    
+}
+
+#hallofshame{
+     width: 33%;
+     float:left;    
+}
+</pre></code>
+
+<figure>
+   <img src="img/04.png" />
+   <figcaption>Figure 4</figcaption>
+</figure>
+<p>Looking good, but we need a little more space between the "halls." We'll do it with padding.  Because we are using the border-box model we can add padding without fiddling with column widths.</p>
+
+<code>
+<pre class="prettyprint lang-css linenums">#description{
+    width: 33%;
+    float:left;   
+}
+
+#halloffame{
+    width: 33%;
+    float:left;
+    padding: 0 5px;
+}
+
+#hallofshame{
+    width: 33%;
+    float:left;
+    padding: 0 5px;
+}
+</pre></code>
+
+<figure>
+   <img src="img/05.png" />
+   <figcaption>Figure 5</figcaption>
+</figure>
+
+<p>Much better. Now we'll take on the navigation. Same idea as with the content columns, but instead of thirds, we'll be using quarters</p>
+
+<code>
+<pre class="prettyprint lang-css linenums">nav ul li a{
+     width: 25%;
+     float: left;
+}
+</pre></code>
+
+<figure>
+   <img src="img/06.png" />
+   <figcaption>Figure 6</figcaption>
+</figure>
+
+<p>Looks okay, but because we're floating those navigation links they no longer expand the box they are sitting in. To fix that we'll use a clearfix</p>
+
+
+[Explain Clearfix here] 
+
+<code>
+<pre class="prettyprint lang-css linenums">nav ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+</pre></code>
+
+<figure>
+   <img src="img/07.png" />
+   <figcaption>Figure 7</figcaption>
+</figure>
+
+
+<p>There, almost perfect.  The last thing we need to do (and this isn't necessarily a responsive thing,) is make the light colored body extend all the way to the end of the page. </p>
+
+<code>
+<pre class="prettyprint lang-css linenums">html { height: 100%; }
+body { min-height: 100%; }
+</pre></code>
+
+<p>Once we do that, we should have a fluid grid that flexes and extends the full height of the viewport. </p>
+
+<figure>
+   <img src="img/08.png" />
+   <figcaption>Figure 8</figcaption>
+</figure>
+
+<p>If you resize the browser you should see an issue crop up when browsers is about 800px or so.   The footer floats up to the hall of shame. It looks terrible. We'll have to fix that with another clearfix.</p>
+
+<figure>
+   <img src="img/09.png" />
+   <figcaption>Figure 9</figcaption>
+</figure>
+
+<code>
+<pre class="prettyprint lang-css linenums">#content:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+</pre></code>
+
+
+<p>Now fixed. </p>
+
+<figure>
+   <img src="img/10.png" />
+   <figcaption>Figure 10</figcaption>
+</figure>
+
+<p>All the CSS for this Exercise:</p>
+
+<code>
+<pre class="prettyprint lang-css linenums">*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#description{
+    width: 33%;
+    float:left;   
+}
+
+#halloffame{
+    width: 33%;
+    float:left;
+    padding: 0 5px;
+}
+
+#hallofshame{
+    width: 33%;
+    float:left;
+    padding: 0 5px;
+}
+
+nav ul li a{
+     width: 25%;
+     float: left;
+}
+
+nav ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html { height: 100%; }
+body { min-height: 100%; }
+
+#content:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+</pre></code>
+
+
+
+
+
+</body>
+</html>
