@@ -45,6 +45,7 @@ article{
 }
 
 footer{
+	margin:40px 0;
 	display: table;
 	width: 100%;
 	font-size: 1.5em;
