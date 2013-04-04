@@ -2,7 +2,7 @@
 <html> 
    <head> 
    <title>Responsive Design in Action Lab - Code Exercise 4</title>
-   <link rel="stylesheet" href="../_style/main.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="../_style/main.css" />
    <link href="../_style/prettify.css" type="text/css" rel="stylesheet" />
    <link href="../_style/tomorrow.css" type="text/css" rel="stylesheet" />
    <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
@@ -84,7 +84,51 @@
 
 <p>We get that extra contrast we want. </p>
 
-[Explain how to get Chrome to display resolutions under 400px wide]
+<aside>
+  <p>Normally you cannot get Chrome to resize below 400px, which is aggravating if you need to test on resolutions lower then that.  However there is a little trick you can do to get it to.  </p>
+
+  <p>Open Chrome &rarr; View &rarr; Developer &rarr; Developer Tools</p>
+
+  <figure>
+    <img src="img/a01.png" />
+   <figcaption>Figure A1</figcaption>
+  </figure>
+
+
+  <p>This will open the Chrome Developer Tools</p>
+
+  <p>In the lower left corner there is an icon that allow you to undock the panel.</p>
+
+  <figure>
+    <img src="img/a02.png" />
+   <figcaption>Figure A2</figcaption>
+  </figure>
+
+  <p>If you hold the button down you have the option of docking the tools on the right of the browser. Do that.</p>.
+
+  <figure>
+    <img src="img/a03.png" />
+   <figcaption>Figure A3</figcaption>
+  </figure>
+
+  <p>Now that the panel is on the right, you can resize the viewport below 400px.</p>
+
+   <figure>
+    <img src="img/a04.png" />
+   <figcaption>Figure A4</figcaption>
+  </figure> 
+
+  <p><em>How do you know its width?</em></p>
+
+
+  <p>Hover over the HTML code in the Developer Tools. Specifically hover over the &lt;body&gt;. When you do this you will get a popover that tells you the dimensions of the body. </p>
+
+   <figure>
+    <img src="img/a05.png" />
+   <figcaption>Figure A5</figcaption>
+  </figure> 
+
+</aside>
 
 <p>Let's go to a smaller extreme.  Let's talk about the iPhone 3g generation of devices.  A lot of them are still out there.  The standard resolution for those devices is 320px X 480px.  At that size the screen is still usable, but leaves a little bit to be desired. </p>
 
