@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="test.ant" name="responsivelab" basedir=".">
+
+	<property file="build.properties"/>
+
+	<target name="test.ant" description="Exports the script of the database ">
+		<echo message="Testing ant in this environment. " />
+		<echo message="basedir:     ${basedir}" />
+		<echo message="ant.version: ${ant.version}" />
+		<echo message="build.dir:     ${build.dir}" />
+		<echo message="package.dir:     ${package.dir}" />
+	</target>
+
+
+
+	<target name="doc.build">
+
+		<concat destfile="${build.docs.dir}/index.html" force="no">
+    		<fileset dir="${basedir.docs}" includes="**/*.html" />
+  		</concat>
+
+	</target>
+</project>	

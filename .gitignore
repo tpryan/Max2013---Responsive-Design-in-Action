@@ -2,3 +2,5 @@
 .DS_Store
 
 code/working/*
+
+build.properties

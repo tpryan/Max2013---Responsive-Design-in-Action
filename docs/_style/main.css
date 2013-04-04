@@ -18,6 +18,10 @@ h1,h2,h3{
 	color: #00A4E4;
 }
 
+h1{
+	page-break-before: always;
+}
+
 aside{
 	border: 1px solid #00A4E4;
 	background-color: #CCCCCC;
@@ -35,4 +39,5 @@ dd{
 
 code{
   font-family: source-code-pro, serif;
+  page-break-before: always;
 }
