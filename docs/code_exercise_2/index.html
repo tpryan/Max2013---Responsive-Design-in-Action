@@ -82,7 +82,7 @@
 <code><pre class="prettyprint lang-css">img{
     max-width:100%; 
 }   
-</pre></code></code>
+</pre></code>
 
 <p>Now the images behave properly.</p> 
 
@@ -95,7 +95,19 @@
 
 <p>There is an easy fix to this, you can use a media query to force images on Retina screens to be half sized, so they will look correct.</p> 
 
-[explain Media Queries]
+<aside>
+  <p>Media queries are a way of selectively applying CSS.  Media queries basically ask a question "Is the answer to this question, true?" You can test a number of features of a browser including the height and width, the orientation, and in the case in this exercise, the pixel density. Typically in responsive web design you are responding to the width of the screen, but in this case we can respond to something more specific. </p>
+
+
+  <p>More on Media Queries</p>
+
+
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/Media_queries">http://en.wikipedia.org/wiki/Media_queries</a></li>
+    <li><a href="http://www.adobe.com/devnet/dreamweaver/articles/introducing-media-queries.edu.html">http://www.adobe.com/devnet/dreamweaver/articles/introducing-media-queries.edu.html</a></li>
+    <li><a href="http://css-tricks.com/snippets/css/retina-display-media-query/">http://css-tricks.com/snippets/css/retina-display-media-query/</a></li>
+  </ul>
+</aside>  
 
 <code><pre class="prettyprint lang-css">@media (-webkit-min-device-pixel-ratio: 2){
     .person img{
