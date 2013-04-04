@@ -170,6 +170,20 @@ img{
 }   
 </pre></code>
 
+<aside>
+<p>I'll cop to it, the solution I use for images is a bit simplistic. Basically, we serve up the biggest images we can and then down scale for smaller image footprints. It's simple but it has one major problem: I am sending the biggest picture over the wire that I can. On a network connected desktop machine, that's no problem regardless of the display abilities of the device.  But on mobile devices often with poor screens and poor connections that's expensive for an image that the user won't be able to fully appreciate. </p>
+
+<p>This is a common problem, and there are a number of solutions out there.  There is also an effort from the W3C to create a standard that handles this. But dealing with this is outside the scope of this lab. Rest assured there are other minds at work on this problem, and here are some resources to help you explore this topic. </p>
+
+<ul>
+  <li><a href="http://decodize.com/html/simple-responsive-image-technique/">http://decodize.com/html/simple-responsive-image-technique/</a></li>
+  <li><a href="http://adaptive-images.com/">http://adaptive-images.com/</a></li>
+  <li><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></li>
+  <li><a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></li>
+</ul>
+
+</aside>  
+
 <footer>
    <div class="prev"><a href="../code_exercise_1/index.html">&larr; Code Exercise 1</a></div>
    <div class="next"><a href="../code_exercise_3/index.html">Code Exercise 3 &rarr;</a></div>
