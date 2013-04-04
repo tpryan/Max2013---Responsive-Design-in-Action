@@ -11,13 +11,70 @@
 		<echo message="package.dir:     ${package.dir}" />
 	</target>
 
+	<target name="doc.clean">
+		<delete>
+			<fileset dir="${build.docs.dir}" includes="**/*"/>
+		</delete>	
+	</target>	
+
+	<target name="doc.build" depends="doc.clean">
+
+		<copy file="${basedir.docs}/intro/reflow.html" tofile="${build.docs.dir}/intro_reflow.html" />
+		<replace file="${build.docs.dir}/intro_reflow.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../intro/img/]]></replacevalue>
+		</replace>
+		<copy file="${basedir.docs}/design_exercise_1/index.html" tofile="${build.docs.dir}/design_exercise_1_index.html" />
+		<replace file="${build.docs.dir}/design_exercise_1_index.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../design_exercise_1/img/]]></replacevalue>
+		</replace>
+
+		<copy file="${basedir.docs}/code_exercise_1/index.html" tofile="${build.docs.dir}/code_exercise_1_index.html" />
+		<replace file="${build.docs.dir}/code_exercise_1_index.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../code_exercise_1/img/]]></replacevalue>
+		</replace>
+
+		<copy file="${basedir.docs}/code_exercise_2/index.html" tofile="${build.docs.dir}/code_exercise_2_index.html" />
+		<replace file="${build.docs.dir}/code_exercise_2_index.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../code_exercise_2/img/]]></replacevalue>
+		</replace>
+		<copy file="${basedir.docs}/code_exercise_3/index.html" tofile="${build.docs.dir}/code_exercise_3_index.html" />
+		<replace file="${build.docs.dir}/code_exercise_3_index.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../code_exercise_3/img/]]></replacevalue>
+		</replace>
+		<copy file="${basedir.docs}/code_exercise_4/index.html" tofile="${build.docs.dir}/code_exercise_4_index.html" />
+		<replace file="${build.docs.dir}/code_exercise_4_index.html">
+			<replacetoken><![CDATA[src="img/]]></replacetoken>
+			<replacevalue><![CDATA[src="../code_exercise_4/img/]]></replacevalue>
+		</replace>
 
 
-	<target name="doc.build">
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/intro_reflow.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/design_exercise_1_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/code_exercise_1_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/code_exercise_2_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/code_exercise_3_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<fileset file="${build.docs.dir}/code_exercise_4_index.html" />
+		</concat>
 
-		<concat destfile="${build.docs.dir}/index.html" force="no">
-    		<fileset dir="${basedir.docs}" includes="**/*.html" />
-  		</concat>
+		<delete>
+			<fileset dir="${build.docs.dir}" includes="**/*" excludes="index.html" />
+		</delete>		
 
 	</target>
 </project>	
