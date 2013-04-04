@@ -14,63 +14,210 @@
 	<target name="doc.clean">
 		<delete>
 			<fileset dir="${build.docs.dir}" includes="**/*"/>
-		</delete>	
-	</target>	
+		</delete>
+	</target>
+
+
 
 	<target name="doc.build" depends="doc.clean">
 
 		<copy file="${basedir.docs}/intro/reflow.html" tofile="${build.docs.dir}/intro_reflow.html" />
 		<replace file="${build.docs.dir}/intro_reflow.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../intro/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../intro/img/]]></replacevalue>
+			</replacefilter>
 		</replace>
 		<copy file="${basedir.docs}/design_exercise_1/index.html" tofile="${build.docs.dir}/design_exercise_1_index.html" />
 		<replace file="${build.docs.dir}/design_exercise_1_index.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../design_exercise_1/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../design_exercise_1/img/]]></replacevalue>
+			</replacefilter>
 		</replace>
 
 		<copy file="${basedir.docs}/code_exercise_1/index.html" tofile="${build.docs.dir}/code_exercise_1_index.html" />
 		<replace file="${build.docs.dir}/code_exercise_1_index.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../code_exercise_1/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../code_exercise_1/img/]]></replacevalue>
+			</replacefilter>
 		</replace>
 
 		<copy file="${basedir.docs}/code_exercise_2/index.html" tofile="${build.docs.dir}/code_exercise_2_index.html" />
 		<replace file="${build.docs.dir}/code_exercise_2_index.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../code_exercise_2/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../code_exercise_2/img/]]></replacevalue>
+			</replacefilter>
 		</replace>
 		<copy file="${basedir.docs}/code_exercise_3/index.html" tofile="${build.docs.dir}/code_exercise_3_index.html" />
 		<replace file="${build.docs.dir}/code_exercise_3_index.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../code_exercise_3/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../code_exercise_3/img/]]></replacevalue>
+			</replacefilter>
 		</replace>
 		<copy file="${basedir.docs}/code_exercise_4/index.html" tofile="${build.docs.dir}/code_exercise_4_index.html" />
 		<replace file="${build.docs.dir}/code_exercise_4_index.html">
-			<replacetoken><![CDATA[src="img/]]></replacetoken>
-			<replacevalue><![CDATA[src="../code_exercise_4/img/]]></replacevalue>
+			<replacefilter>
+				<replacetoken><![CDATA[src="img/]]></replacetoken>
+				<replacevalue><![CDATA[src="../code_exercise_4/img/]]></replacevalue>
+			</replacefilter>
+				
+		</replace>
+
+
+		<replace dir="${build.docs.dir}">
+			<replacefilter>
+				<replacetoken><![CDATA[</html>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[</body>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<link href="../_style/main.css" rel="stylesheet"  />]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<link href="../_style/prettify.css" rel="stylesheet" />]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<script src="http://use.edgefonts.net/source-sans-pro.js"></script>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<script src="http://use.edgefonts.net/source-code-pro.js"></script>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<script type="text/javascript" src="../_style/prettify.js"></script>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<script type="text/javascript" src="../_style/main.js"></script>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<!DOCTYPE html>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<html>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<head>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[</head>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<body>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[<title]]></replacetoken>
+				<replacevalue><![CDATA[<!--<title]]></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[/title>]]></replacetoken>
+				<replacevalue><![CDATA[/title>-->]]></replacevalue>
+			</replacefilter>				
 		</replace>
 
 
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<!DOCTYPE html> 
+<html> 
+   <head> 
+   <title>Responsive Design in Action Lab - Code Exercise 1</title>
+   <link href="../_style/main.css" rel="stylesheet"  />
+   <link href="../_style/prettify.css" rel="stylesheet" />
+   <link href="../_style/tomorrow.css" rel="stylesheet" />
+   <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+   <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+   <script type="text/javascript" src="../_style/prettify.js"></script> 
+   <script type="text/javascript" src="../_style/main.js"></script> 
+</head> 
+<body>
+			]]>
+</concat>	
+
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/intro_reflow.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
 		</concat>
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/design_exercise_1_index.html" />
 		</concat>
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/code_exercise_1_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
 		</concat>
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/code_exercise_2_index.html" />
 		</concat>
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/code_exercise_3_index.html" />
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[<article>]]>
 		</concat>
 		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
 			<fileset file="${build.docs.dir}/code_exercise_4_index.html" />
 		</concat>
+		<concat destfile="${build.docs.dir}/index.html" append="yes" force="yes" fixlastline="yes">
+			<![CDATA[</article>]]>
+		</concat>
+
+
+
+
+		<!-- <replacefilter>
+				<replacetoken><![CDATA[</html>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>
+			<replacefilter>
+				<replacetoken><![CDATA[</body>]]></replacetoken>
+				<replacevalue></replacevalue>
+			</replacefilter>	
+ -->
+
+
 
 		<delete>
 			<fileset dir="${build.docs.dir}" includes="**/*" excludes="index.html" />
