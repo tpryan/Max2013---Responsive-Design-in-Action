@@ -60,3 +60,9 @@ footer .prev, footer .next{
 .prev{
 	text-align: left;
 }
+
+@media print {
+      footer {
+          display: none;
+      }
+}
