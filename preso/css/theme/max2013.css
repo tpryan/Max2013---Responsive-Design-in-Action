@@ -245,7 +245,10 @@ body {
 
 .question h1 {
   font-size: 3em;
-  line-height: 4; }
+  line-height: 1.5;
+  text-align: center; }
+.question p {
+  text-align: center; }
 
 .mneumonic-large {
   width: 400px;
