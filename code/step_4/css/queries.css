@@ -1,4 +1,7 @@
 @media all and (max-width: 850px) {
+    body{
+        max-width: 100%;
+    }
 	#description{
 		width: 100%;
 	}

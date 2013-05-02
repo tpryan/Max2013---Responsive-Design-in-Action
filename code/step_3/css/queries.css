@@ -1,5 +1,8 @@
 @media all and (max-width: 850px) {
-	#description{
+	body{
+        max-width: 100%;
+    }
+    #description{
 		width: 100%;
 	}
     #hallofshame, #halloffame{
