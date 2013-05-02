@@ -19,9 +19,8 @@
 
 
 
-	<target name="doc.build" depends="doc.clean">
+	<target name="doc.build" depends="build,doc.clean">
 
-		<echo message="Copying files to combine" />
 		<copy file="${basedir.docs}/intro/reflow.html" tofile="${build.docs.dir}/intro_reflow.html" />
 		<replace file="${build.docs.dir}/intro_reflow.html">
 			<replacefilter>

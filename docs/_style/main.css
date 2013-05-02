@@ -66,4 +66,7 @@ footer .prev, footer .next{
       footer {
           display: none;
       }
+      aside{
+		box-shadow: none;
+	}
 }
