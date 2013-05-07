@@ -306,5 +306,16 @@
 		</exec>
 		
 	</target>
+
+	<target name="comment">
+		<copy file="${basedir}/code/working/css/commented-layout.css" 
+			tofile="${basedir}//code/working/css/layout.css" overwrite="true" verbose="true" />
+		<copy file="${basedir}/code/working/css/commented-images.css" 
+			tofile="${basedir}//code/working/css/images.css" overwrite="true" verbose="true" />
+		<copy file="${basedir}/code/working/css/commented-queries.css" 
+			tofile="${basedir}//code/working/css/queries.css" overwrite="true" verbose="true" />
+		<copy file="${basedir}/code/working/css/commented-tweaks.css" 
+			tofile="${basedir}//code/working/css/tweaks.css" overwrite="true" verbose="true" />		
+	</target>	
 	
 </project>	
